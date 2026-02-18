@@ -49,9 +49,15 @@ def main():
             num2 = float(input("Enter the second number: "))
             break
         except:
-            print("Please enter valid numbers.")
-            
-    operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
+            print("Please enter valid numbers.\n")
+
+    while True:
+        operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
+        
+        if operation == "add" or operation == "subtract" or operation == "multiply" or operation == "divide":
+            break
+        else:
+            print("Please enter a valid operation.\n")   
 
     # Perform the calculation and display the result
     result = simple_calculator(operation, num1, num2)
